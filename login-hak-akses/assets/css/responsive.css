@@ -1,0 +1,280 @@
+/* ============================================
+   LIQUID GLASS THEME - Responsive Overrides
+   ============================================ */
+
+/* ---- Large tablets (1024px - 1200px) ---- */
+@media (max-width: 1200px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-cards-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Tablets & small laptops (768px - 1024px) ---- */
+@media (max-width: 1024px) {
+    :root {
+        --header-height: 56px;
+    }
+
+    .sidebar {
+        width: 280px;
+        transform: translateX(-100%);
+        z-index: 2000;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-header {
+        padding: 0 1rem;
+    }
+
+    .page-content {
+        padding: 1.25rem;
+    }
+}
+
+/* ---- Mobile (less than 768px) ---- */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.35rem;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .stat-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .glass-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .glass-table {
+        min-width: 600px;
+    }
+
+    .featured-card {
+        padding: 1.15rem;
+    }
+
+    .featured-card .card-title {
+        font-size: 1rem;
+    }
+
+    .flex-between {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .search-box {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header-right {
+        gap: 0.35rem;
+    }
+
+    .edit-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-glass {
+        width: 95%;
+        margin: 1rem;
+    }
+}
+
+/* ---- Small mobile (less than 480px) ---- */
+@media (max-width: 480px) {
+    .top-header {
+        padding: 0 0.75rem;
+    }
+
+    .header-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+    }
+
+    .login-card {
+        padding: 1.5rem;
+        margin: 0.5rem;
+        border-radius: 20px;
+    }
+
+    .login-card .login-logo {
+        width: 52px;
+        height: 52px;
+        font-size: 1.4rem;
+        border-radius: 14px;
+    }
+
+    .login-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-action-item {
+        padding: 1rem 0.5rem;
+    }
+
+    .quick-action-item i {
+        font-size: 1.25rem;
+        width: 38px;
+        height: 38px;
+    }
+
+    .quick-action-item span {
+        font-size: 0.75rem;
+    }
+
+    .btn-glass {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .sidebar-brand .brand-text {
+        font-size: 1rem;
+    }
+
+    .notification-dropdown {
+        width: 280px;
+        right: -60px;
+    }
+
+    .toast-container {
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .toast {
+        min-width: auto;
+    }
+}
+
+/* ---- Touch optimizations ---- */
+@media (hover: none) and (pointer: coarse) {
+    .sidebar-nav .nav-link {
+        padding: 0.85rem;
+    }
+
+    .btn-glass {
+        min-height: 44px;
+    }
+
+    .glass-input {
+        min-height: 44px;
+        font-size: 16px; /* prevents iOS zoom */
+    }
+
+    .header-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .glass-table tbody td {
+        padding: 0.85rem 1rem;
+    }
+}
+
+/* ---- Print ---- */
+@media print {
+    .sidebar,
+    .top-header,
+    .mobile-toggle,
+    .sidebar-overlay,
+    .toast-container {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    .glass-card,
+    .stat-card,
+    .glass-table-wrapper {
+        backdrop-filter: none;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+}
+
+/* ---- Landscape phone ---- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .login-wrapper {
+        padding: 0.5rem;
+    }
+
+    .login-card {
+        padding: 1.25rem;
+    }
+
+    .login-card .login-logo {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .login-card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .login-card .login-subtitle {
+        margin-bottom: 1rem;
+    }
+}
